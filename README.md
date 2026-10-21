@@ -23,7 +23,7 @@
 
 ## Funktionen
 
-| | |
+| Funktion | Beschreibung |
 |---|---|
 | 🧩 **Zeichnen per Drag & Drop** | Anweisungen, Verzweigungen, Fallauswahl, Schleifen, Aussprung und Aufruf aus der Leiste ins Struktogramm ziehen |
 | ⬅️ **Struktogramm aus Code** | Java, C, C++, C#, JavaScript, Python und Pascal/Delphi einfügen – die Sprache wird automatisch erkannt, jede Funktion wird ein eigenes Struktogramm |
