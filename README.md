@@ -1,49 +1,101 @@
-# Struktogrammeditor
+<p align="center">
+  <img src="src/main/resources/icons/logostr.png" alt="Logo" width="64">
+</p>
 
-Editor für Struktogramme (Nassi-Shneiderman-Diagramme): Struktogramme per Drag & Drop zeichnen, als Bild/PDF exportieren und in Quellcode umwandeln – und umgekehrt aus Quellcode ein Struktogramm erzeugen.
+<h1 align="center">Struktogrammeditor</h1>
 
-Erweiterte Fassung von [malik-creates](https://github.com/malik-creates), basierend auf dem [Struktogrammeditor von Kevin Krummenauer](https://github.com/kekru/struktogrammeditor).
+<p align="center">
+  Struktogramme (Nassi-Shneiderman-Diagramme) zeichnen, aus Quellcode erzeugen und wieder in Code umwandeln.
+</p>
+
+<p align="center">
+  <a href="https://github.com/malik-creates/Struktogrammeditor/releases/latest"><img src="https://img.shields.io/github/v/release/malik-creates/Struktogrammeditor?label=Download&color=2f6fed" alt="Download"></a>
+  <a href="https://github.com/malik-creates/Struktogrammeditor/actions"><img src="https://img.shields.io/github/actions/workflow/status/malik-creates/Struktogrammeditor/maven-build.yml?label=Build" alt="Build"></a>
+  <img src="https://img.shields.io/badge/Java-8%2B-orange" alt="Java 8+">
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/malik-creates/Struktogrammeditor?color=lightgrey" alt="Lizenz"></a>
+</p>
+
+<p align="center">
+  <img src="docs/bilder/hauptfenster.png" alt="Hauptfenster des Struktogrammeditors" width="850">
+</p>
+
+---
 
 ## Funktionen
 
-- **Struktogramm aus Code erzeugen** (Datei → Struktogramm aus Code erzeugen, Strg+I)
-  - Java, C, C++, C#, JavaScript, Python und Pascal/Delphi, Sprache wird automatisch erkannt
-  - jede Methode bzw. Funktion wird ein eigenes Struktogramm
-  - Live-Vorschau beim Tippen, Fehler werden mit Zeilennummer angezeigt
-- **Code aus dem Struktogramm erzeugen** in Java, C#, JavaScript, C/C++, Python und Pascal
-  - typische Befehle (Ein-/Ausgabe, Zuweisungen, Zählschleifen, Operatoren) werden an die Sprache angepasst
-- **Export** als PDF und SVG (Vektorgrafik) sowie als PNG in doppelter Auflösung
-- **Zoom** der ganzen Ansicht (Strg+Mausrad, Strg+Plus/Minus)
-- **Modernes Design** in hell und dunkel ([FlatLaf](https://www.formdev.com/flatlaf/)), scharfe Darstellung auch bei Windows-Skalierung
-- **Automatische Sicherung**: nach einem Absturz werden ungespeicherte Struktogramme beim nächsten Start angeboten
+| | |
+|---|---|
+| 🧩 **Zeichnen per Drag & Drop** | Anweisungen, Verzweigungen, Fallauswahl, Schleifen, Aussprung und Aufruf aus der Leiste ins Struktogramm ziehen |
+| ⬅️ **Struktogramm aus Code** | Java, C, C++, C#, JavaScript, Python und Pascal/Delphi einfügen – die Sprache wird automatisch erkannt, jede Funktion wird ein eigenes Struktogramm |
+| ➡️ **Code aus dem Struktogramm** | Java, C#, JavaScript, C/C++, Python und Pascal – Ein-/Ausgabe, Zuweisungen, Zählschleifen und Operatoren werden an die Sprache angepasst |
+| 📄 **Export** | PDF und SVG als Vektorgrafik, PNG in doppelter Auflösung (scharf in Word) oder direkt in die Zwischenablage |
+| 🔍 **Zoom** | ganze Ansicht mit Strg + Mausrad vergrössern, scharf auch bei Windows-Skalierung |
+| 🌙 **Hell & dunkel** | modernes Design, mit einem Klick umschaltbar |
+| 💾 **Automatische Sicherung** | ungespeicherte Struktogramme werden nach einem Absturz beim nächsten Start angeboten |
 
-Beispiele liegen im Ordner [`beispiele`](beispiele).
+## Struktogramm aus Code erzeugen
 
-## Starten
+Code einfügen oder eine Datei laden – rechts erscheint schon beim Tippen die Vorschau. Fehler werden mit Zeilennummer angezeigt.
 
-Benötigt Java 8 oder neuer. Die fertige jar per Doppelklick starten oder:
+<p align="center">
+  <img src="docs/bilder/code-import.png" alt="Struktogramm aus Python-Code erzeugen" width="850">
+</p>
+
+## Code aus dem Struktogramm erzeugen
+
+Sprache wählen, fertig. Der Code aktualisiert sich bei jeder Änderung der Optionen und lässt sich mit einem Klick kopieren.
+
+<p align="center">
+  <img src="docs/bilder/code-erzeugen.png" alt="Python-Code aus einem Struktogramm erzeugen" width="720">
+</p>
+
+## Dunkles Design
+
+<p align="center">
+  <img src="docs/bilder/dunkel.png" alt="Struktogrammeditor im dunklen Design" width="850">
+</p>
+
+## Download und Start
+
+1. [Java](https://adoptium.net/) 8 oder neuer installieren (falls noch nicht vorhanden).
+2. Die neueste `Struktogrammeditor-….jar` unter **[Releases](https://github.com/malik-creates/Struktogrammeditor/releases/latest)** herunterladen.
+3. Per Doppelklick starten – oder im Terminal:
 
 ```bash
-java -jar struktogrammeditor-1.8-jar-with-dependencies.jar
+java -jar Struktogrammeditor-1.8.jar
 ```
+
+## Bedienung
+
+| Aktion | So geht's |
+|---|---|
+| Element einfügen | aus der linken Leiste ins Struktogramm ziehen |
+| Text bearbeiten | Element anklicken |
+| Weitere Aktionen (Fälle, Kopieren, Grösse) | Rechtsklick auf ein Element |
+| Element verschieben | im Struktogramm an die neue Stelle ziehen |
+| Element löschen | auf den Papierkorb ziehen oder Maus darüber + `Entf` |
+| Struktogramm aus Code | `Strg + I` |
+| Ansicht zoomen | `Strg + Mausrad`, `Strg + Plus/Minus`, `Strg + 0` |
+| Rückgängig / Widerrufen | `Strg + Z` / `Strg + Y` |
+
+Beispiele zum Ausprobieren liegen im Ordner [`beispiele`](beispiele).
 
 ## Selbst bauen
 
-Windows (PowerShell):
+Es wird nur Java benötigt, Maven lädt sich über den Wrapper selbst herunter.
 
 ```bash
+# Windows (PowerShell)
 .\mvnw.cmd clean package
-```
 
-Linux/macOS:
-
-```bash
-chmod +x mvnw
+# Linux / macOS
 ./mvnw clean package
 ```
 
 Die ausführbare Datei liegt danach unter `target/struktogrammeditor-1.8-jar-with-dependencies.jar`.
 
-## Lizenz
+## Herkunft und Lizenz
 
-MIT-Lizenz, siehe [LICENSE](LICENSE). Enthält [JDOM](http://www.jdom.org/) und [FlatLaf](https://www.formdev.com/flatlaf/) (Apache License 2.0).
+Erweiterte Fassung von [malik-creates](https://github.com/malik-creates), basierend auf dem [Struktogrammeditor von Kevin Krummenauer](https://github.com/kekru/struktogrammeditor).
+
+Veröffentlicht unter der [MIT-Lizenz](LICENSE). Enthält [JDOM](http://www.jdom.org/) und [FlatLaf](https://www.formdev.com/flatlaf/) (Apache License 2.0).
